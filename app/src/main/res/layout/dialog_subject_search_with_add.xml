@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Поиск существующих предметов -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Найти предмет:"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etSearchSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите название предмета..."
+        android:maxLines="1"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp" />
+
+    <!-- Добавление нового предмета -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Или добавьте свой:"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/etNewSubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Новый предмет"
+            android:maxLines="1"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnAddSubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primary_color"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Список предметов -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Список предметов:"
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <ListView
+        android:id="@+id/listViewSubjects"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:divider="@color/divider"
+        android:dividerHeight="1dp" />
+
+    <!-- Подсказка -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Начните вводить название или добавьте свой предмет"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center" />
+
+</LinearLayout>
